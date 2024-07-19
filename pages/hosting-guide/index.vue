@@ -10,10 +10,14 @@
           ></div
         ></NuxtLink>
         <a
-          class="font-extrabold tracking-wide leading-none shrink-0 p-3 border-2 text-white border-gray-700 rounded hover:bg-gray-700 focus:bg-gray-700 transition-colors duration-200"
-          href="https://www.vishnuraghav.com/donate"
+          class="font-extrabold tracking-wide leading-none shrink-0 p-3 border-2 text-white border-gray-700 rounded hover:bg-gray-700 focus:bg-gray-700 transition-colors 
+          duration-200
+          text-[#ef4444]
+          border-[#ef4444]
+          "
+          href="/login"
           target="_blank"
-          >Donate</a
+          >Login</a
         >
       </div>
       <div id="guide" class="max-w-screen-sm">

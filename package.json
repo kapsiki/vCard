@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "HOST=0.0.0.0 PORT=2221 nuxt",
+    "dev": "cross-env HOST=0.0.0.0 PORT=2221 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
@@ -17,6 +17,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.22.7",
     "cropperjs": "^1.5.11",
+    "cross-env": "^7.0.3",
     "file-saver": "^2.0.5",
     "id3-parser": "^2.0.0",
     "jszip": "^3.10.1",

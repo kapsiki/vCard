@@ -16,6 +16,11 @@ module.exports = {
       backgroundColor: ['group-focus', 'checked'],
       borderColor: ['checked'],
       brightness: ['hover', 'focus'],
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        'white': '#ffffff',
+      },  
     },
   },
   plugins: [],

@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1, h2 {
+    color: #ef4444;
+}
+
+p, span, label {
+    color: #525252!important;
+}
+
+button {
+    background-color: transparent!important;
+    border: 2px solid #ef4444!important;
+    color: #ef4444!important;
+}

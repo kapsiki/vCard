@@ -21,7 +21,7 @@
         "
         :class="
           downloadChecked
-            ? 'bg-emerald-600 cursor-pointer text-white focus:bg-emerald-500 hover:bg-emerald-500'
+            ? 'bg-red-500 cursor-pointer text-white focus:bg-emerald-500 hover:bg-emerald-500'
             : 'cursor-not-allowed text-black'
         "
       >
@@ -39,11 +39,14 @@
         If you find this service valuable to you or your business, please
         consider donating.
         <br /><a
-          class="inline-block font-extrabold tracking-wide leading-none shrink-0 p-3 text-white bg-gray-700 rounded hover:bg-gray-600 focus:bg-gray-600 transition-colors duration-200 mt-4"
-          href="https://www.vishnuraghav.com/donate/"
+          class="inline-block font-extrabold tracking-wide leading-none shrink-0 p-3 text-white bg-gray-700 rounded hover:bg-gray-600 focus:bg-gray-600 transition-colors duration-200 mt-4
+          text-[#ef4444]
+          border-[#ef4444]
+          "
+          href="/login"
           rel="noreferrer"
           target="_blank"
-          >Donate</a
+          >Login</a
         >
       </p>
     </div>

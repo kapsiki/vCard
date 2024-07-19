@@ -1,7 +1,7 @@
 <template>
   <div
     ref="container"
-    class="container relative bg-gray-900 mx-auto text-gray-100"
+    class="container relative bg-white mx-auto text-gray-100"
     style="max-width: 960px"
   >
     <Modal
@@ -39,7 +39,7 @@
             focus:outline-none
             select-none
           "
-          :class="showPreview ? 'bg-gray-700' : 'bg-emerald-600'"
+          :class="showPreview ? 'bg-gray-700' : 'bg-red-500'"
           @click="!opening && togglePreview()"
         >
           {{ showPreview ? 'Close preview' : 'Open preview' }}
@@ -73,7 +73,7 @@
         <div
           class="logo w-24"
           v-html="require(`~/assets/icons/logo.svg?include`)"
-          title="EnBizCard - An Open-Source Digital Business Card Generator"
+          title="Kapsiki-Card - A Digital Business Card Generator"
         ></div>
         <a
           class="
@@ -83,18 +83,18 @@
             shrink-0
             p-3
             border-2
-            text-white
-            border-gray-700
+            text-[#ef4444]
+            border-[#ef4444]
             rounded
             hover:bg-gray-700
             focus:bg-gray-700
             transition-colors
             duration-200
           "
-          href="https://www.vishnuraghav.com/donate"
+          href="/login"
           target="_blank"
           rel="noreferrer"
-          >Donate</a
+          >Login</a
         >
       </div>
       <h1
@@ -108,16 +108,10 @@
       >
         Why Pay When Your Website Can Host Your Digital Business Cards for Free!
       </h1>
-      <p class="mt-8 text-lg md:text-xl w-full md:w-3/4 text-gray-200">
-        EnBizCard helps you create beautiful, responsive HTML&#8209;based
+      <p class="mt-8 text-lg md:text-xl w-full md:w-3/4 text-neutral-600">
+        Kapsiki-Card helps you create beautiful, responsive HTML&#8209;based
         digital business cards that can be hosted on your website.
       </p>
-      <ul class="mt-4 text-gray-400">
-        <li>-&ensp;No sign-up required</li>
-        <li>-&ensp;100% free and open-source</li>
-        <li>-&ensp;No user tracking and data collection</li>
-        <li>-&ensp;Works offline</li>
-      </ul>
       <div class="mt-4 flex flex-wrap items-center">
         <button
           class="
@@ -131,7 +125,7 @@
             mt-2
             mr-2
             text-white
-            bg-emerald-600
+            bg-red-500
             rounded
             hover:bg-emerald-500
             focus:bg-emerald-500
@@ -165,23 +159,6 @@
           >View demo</a
         >
       </div>
-      <p class="mt-6">
-        Read the
-        <NuxtLink
-          to="/hosting-guide"
-          class="
-            cursor-pointer
-            underline
-            font-extrabold
-            text-emerald-600
-            hover:text-emerald-500
-            focus:text-emerald-500
-            transition-colors
-            duration-200
-          "
-          >Hosting Guide</NuxtLink
-        >
-      </p>
     </div>
     <div class="md:grid md:grid-cols-2">
       <div class="px-4 mt-32">
@@ -712,7 +689,7 @@
                   focus:outline-none
                 "
                 :class="{
-                  'bg-emerald-600 hover:bg-emerald-500 focus:bg-emerald-500':
+                  'bg-red-500 hover:bg-emerald-500 focus:bg-emerald-500':
                     footerCredit,
                 }"
                 tabindex="0"
@@ -772,7 +749,7 @@
               "
               :class="
                 theme == 1
-                  ? 'bg-emerald-600'
+                  ? 'bg-red-500'
                   : 'bg-gray-700 hover:bg-gray-600 focus:bg-gray-600'
               "
             >
@@ -793,7 +770,7 @@
               "
               :class="
                 theme == 2
-                  ? 'bg-emerald-600'
+                  ? 'bg-red-500'
                   : 'bg-gray-700 hover:bg-gray-600 focus:bg-gray-600'
               "
             >
@@ -814,7 +791,7 @@
               "
               :class="
                 theme == 3
-                  ? 'bg-emerald-600'
+                  ? 'bg-red-500'
                   : 'bg-gray-700 hover:bg-gray-600 focus:bg-gray-600'
               "
             >
