@@ -1,6 +1,6 @@
 <template>
   <div
-    class="overflow-y-scroll max-hd border-t-0 border-4 border-black bg-gray-900"
+    class="overflow-y-scroll max-hd border-t-0 border-4 border-neutral-400 bg-red-500"
   >
     <div :id="`Theme${theme}`">
       <html
@@ -17,10 +17,10 @@
           <meta v-if="!PreviewMode" name="robots" content="noindex, nofollow" />
           <meta
             name="author"
-            content="EnBizCard - An Open-Source Digital Business Card Generator"
+            content="KapsikiCard - An Open-Source Digital Business Card Generator"
           />
-          <meta name="url" content="https://enbizcard.vishnuraghav.com/" />
-          <meta name="designer" content="Vishnu Raghav" />
+          <meta name="url" content="https://kouete.com/" />
+          <meta name="designer" content="Kouete Digital Solutions" />
           <meta
             property="og:title"
             :content="`${getFullname}'s Digital Business Card`"
@@ -209,7 +209,7 @@
                 class="icon iconColor"
                 v-html="require(`~/assets/icons/add-user.svg?include`)"
               ></div>
-              <p class="iconColor">Save Contact</p>
+              <b class="iconColor">Save Contact</b>
             </a>
             <div class="actions">
               <div
@@ -341,13 +341,13 @@
             :style="{ backgroundColor: `${colors.mainBg.color}` }"
             class="textColor"
           >
-            Created with
+            Created by
             <a
               class="textColor"
-              href="https://enbizcard.vishnuraghav.com/"
+              href="https://kouete.com/"
               target="_blank"
               rel="noopener noreferrer"
-              >EnBizCard</a
+              >Kouete Digital Solutions</a
             >
           </footer>
         </body>

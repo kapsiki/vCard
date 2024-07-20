@@ -106,11 +106,10 @@
           md:mt-48 md:leading-tight
         "
       >
-        Why Pay When Your Website Can Host Your Digital Business Cards for Free!
+        Create smart digital business cards.
       </h1>
       <p class="mt-8 text-lg md:text-xl w-full md:w-3/4 text-neutral-600">
-        Kapsiki-Card helps you create beautiful, responsive HTML&#8209;based
-        digital business cards that can be hosted on your website.
+        This app helps you create beautiful and responsive digital business cards.
       </p>
       <div class="mt-4 flex flex-wrap items-center">
         <button
@@ -135,29 +134,8 @@
           "
           @click="create()"
         >
-          Create your own
+          Create a card
         </button>
-        <a
-          class="
-            font-extrabold
-            leading-none
-            text-lg
-            tracking-wide
-            shrink-0
-            p-5
-            mt-2
-            text-white
-            bg-gray-700
-            rounded
-            hover:bg-gray-600
-            focus:bg-gray-600
-            transition-colors
-            duration-200
-          "
-          href="/demo"
-          target="_blank"
-          >View demo</a
-        >
       </div>
     </div>
     <div class="md:grid md:grid-cols-2">
@@ -215,7 +193,8 @@
                   px-4
                   w-full
                   h-12
-                  bg-black
+                  text-gray-600
+                  border-gray-700
                   rounded
                   border border-transparent
                   transition-colors
@@ -238,7 +217,8 @@
                   px-4
                   w-full
                   h-12
-                  bg-black
+                  text-gray-600
+                  border-gray-700
                   rounded
                   border border-transparent
                   transition-colors
@@ -263,7 +243,8 @@
                 px-4
                 w-full
                 h-12
-                bg-black
+                text-gray-600
+                border-gray-700
                 placeholder-gray-600
                 rounded
                 border border-transparent
@@ -287,7 +268,8 @@
                 px-4
                 w-full
                 h-12
-                bg-black
+                text-gray-600
+                border-gray-700
                 rounded
                 border border-transparent
                 transition-colors
@@ -310,7 +292,8 @@
                 px-4
                 w-full
                 h-12
-                bg-black
+                text-gray-600
+                border-gray-700
                 rounded
                 border border-transparent
                 transition-colors
@@ -332,7 +315,8 @@
                 px-4
                 py-3
                 w-full
-                bg-black
+                text-gray-600
+                border-gray-700
                 rounded
                 border border-transparent
                 transition-colors
@@ -358,7 +342,8 @@
                 px-4
                 py-3
                 w-full
-                bg-black
+                text-gray-600
+                border-gray-700
                 rounded
                 border border-transparent
                 transition-colors
@@ -388,7 +373,8 @@
                 px-4
                 py-3
                 w-full
-                bg-black
+                text-gray-600
+border-gray-700
                 placeholder-gray-600
                 rounded
                 border border-transparent
@@ -439,7 +425,8 @@
                 mb-2
                 w-full
                 h-12
-                bg-black
+                text-gray-600
+border-gray-700
                 placeholder-gray-600
                 rounded
                 border border-transparent
@@ -541,7 +528,8 @@
                 mb-2
                 w-full
                 h-12
-                bg-black
+                text-gray-600
+border-gray-700
                 placeholder-gray-600
                 rounded
                 border border-transparent
@@ -829,7 +817,8 @@
                 px-4
                 py-3
                 w-full
-                bg-black
+                text-gray-600
+border-gray-700
                 placeholder-gray-600
                 rounded
                 border border-transparent
@@ -857,7 +846,8 @@
                 px-4
                 py-3
                 w-full
-                bg-black
+                text-gray-600
+border-gray-700
                 placeholder-gray-600
                 rounded
                 border border-transparent
@@ -890,7 +880,8 @@
                 px-4
                 py-3
                 w-full
-                bg-black
+                text-gray-600
+border-gray-700
                 placeholder-gray-600
                 rounded
                 border border-transparent
@@ -924,7 +915,8 @@
                 px-4
                 py-3
                 w-full
-                bg-black
+                text-gray-600
+border-gray-700
                 placeholder-gray-600
                 rounded
                 border border-transparent
@@ -965,8 +957,8 @@
             lg:mx-12
           "
         >
-          <div id="device" class="bg-black rounded sm:mt-10">
-            <h2 class="text-center py-4 font-extrabold text-gray-200">
+          <div id="device" class="bg-[#ddd] rounded sm:mt-10">
+            <h2 class="text-center py-4 font-extrabold textColor">
               LIVE PREVIEW
             </h2>
             <div id="browserFrame" class="overflow-hidden flex flex-col">
@@ -974,15 +966,15 @@
                 id="topBar"
                 class="
                   topbar
-                  border-r-4 border-l-4 border-black
-                  bg-gray-900
+                  border-r-4 border-l-4 border-neutral-400
+                  bg-neutral-400
                   z-10
                 "
               >
                 <div id="searchField" class="p-2 flex items-center">
                   <input
                     type="text"
-                    class="pl-4 h-12 w-full bg-black rounded text-gray-500"
+                    class="pl-4 h-12 w-full bg-[#ddd] rounded text-gray-500"
                     aria-label="vCard URL"
                     disabled
                     :value="'https://yoursite/vcard/' + username"
@@ -1103,7 +1095,7 @@ export default {
       },
       colors: {
         logoBg: {
-          color: `#059669`,
+          color: `#ef4444`,
           openPalette: false,
         },
         mainBg: {
@@ -1111,7 +1103,7 @@ export default {
           openPalette: false,
         },
         buttonBg: {
-          color: `#059669`,
+          color: `#ef4444`,
           openPalette: false,
         },
         cardBg: {

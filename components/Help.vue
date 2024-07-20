@@ -6,12 +6,12 @@
     <div class="stepC mt-6">
       <div class="flex items-center mt-6">
         <a
-          href="https://t.me/enbizcard"
+          href="https://kouete.com"
           target="_blank"
-          class="flex items-center text-lg leading-none p-5 shrink-0 rounded cursor-pointer border-2 border-transparent bg-gray-700 text-white hover:bg-gray-600 focus:bg-gray-600 transition-colors duration-200 font-extrabold"
+          class="flex items-center text-lg leading-none p-5 shrink-0 rounded cursor-pointer border-2 border-transparent bg-red-500 text-white hover:bg-gray-600 focus:bg-gray-600 transition-colors duration-200 font-extrabold"
           rel="noreferrer"
         >
-          Join the Telegram group
+          Contact Admin
         </a>
       </div>
     </div>

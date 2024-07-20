@@ -1,5 +1,9 @@
 <template>
-  <div class="flex flex-col w-full mt-6 bg-gray-800 rounded">
+  <div class="flex flex-col w-full mt-6 
+  border
+  text-gray-600
+  border-gray-700
+  rounded">
     <div class="flex justify-between">
       <div class="flex items-center w-full">
         <div
