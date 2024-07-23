@@ -31,12 +31,12 @@
           digital business card online.
         </h2>
 
-        <p class="mt-16 border px-4 py-3 rounded border-gray-700">
+        <div class="mt-16 border px-4 py-3 rounded border-gray-700">
           Your digital business card files are in the folder you just extracted
           from your downloaded ZIP file. This folder will be referred to as the
-          "<span class="font-extrabold">bizcard folder</span>" throughout this
+          "<div class="font-extrabold">bizcard folder</div>" throughout this
           guide.
-        </p>
+        </div>
 
         <div class="mt-16">
           <h3 class="font-extrabold text-2xl">

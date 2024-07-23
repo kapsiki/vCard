@@ -10,10 +10,10 @@
       Made by
       <a
         class="underline text-emerald-600 font-extrabold hover:text-emerald-500 focus:text-emerald-500 transition-colors duration-200"
-        href="https://www.kouete.com/"
+        href="https://www.inq.com/"
         target="_blank"
         rel="noopener noreferrer"
-        >Kouete Digital Solutions</a
+        >inq.</a
       >
     </p>
   </footer>

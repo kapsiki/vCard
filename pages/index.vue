@@ -67,7 +67,6 @@
         :pubKeyIsValid="pubKeyIsValid"
       />
     </transition>
-
     <div class="px-4">
       <div class="flex items-start justify-between pt-8">
         <div
@@ -139,7 +138,7 @@
       </div>
     </div>
     <div class="md:grid md:grid-cols-2">
-      <div class="px-4 mt-32">
+      <div class="px-4 mt-32" id="contactInfo">
         <div ref="create" id="step-1" class="pt-8">
           <h2 class="font-extrabold text-2xl">Header attachments</h2>
           <div class="stepC">
@@ -426,7 +425,7 @@ border-gray-700
                 w-full
                 h-12
                 text-gray-600
-border-gray-700
+                border-gray-700
                 placeholder-gray-600
                 rounded
                 border border-transparent
@@ -652,6 +651,7 @@ border-gray-700
             </p>
           </div>
         </div>
+
         <div id="step-6" class="mt-16">
           <h2 class="font-extrabold text-2xl">Footer credit</h2>
           <div class="stepC mt-6">
@@ -677,7 +677,7 @@ border-gray-700
                   focus:outline-none
                 "
                 :class="{
-                  'bg-red-500 hover:bg-emerald-500 focus:bg-emerald-500':
+                  'bg-red-500':
                     footerCredit,
                 }"
                 tabindex="0"
@@ -940,7 +940,9 @@ border-gray-700
           :downloadChecked="downloadChecked"
           :downloadPackage="downloadPackage"
         />
+        <!--
         <Help />
+        -->
       </div>
       <div
         id="preview-container"

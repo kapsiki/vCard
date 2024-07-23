@@ -7,11 +7,29 @@ h1, h2 {
 }
 
 p, span, label {
-    color: #525252!important;
+    color: #020617!important;
 }
 
 button {
-    background-color: transparent!important;
-    border: 2px solid #ef4444!important;
-    color: #ef4444!important;
+    color: #ffffff!important;
 }
+
+button:hover {
+    background-color: #ef4444!important;
+    color: #ffffff!important;
+}
+
+#qrcode {
+  margin: 2rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 0.5rem;
+}
+
+.qrcode > canva {
+    height: 150px;
+    width: 150px;
+    display: flex!important;
+    text-align: center;
+    justify-content: center;
+  }

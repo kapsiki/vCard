@@ -19,8 +19,8 @@
             name="author"
             content="KapsikiCard - An Open-Source Digital Business Card Generator"
           />
-          <meta name="url" content="https://kouete.com/" />
-          <meta name="designer" content="Kouete Digital Solutions" />
+          <meta name="url" content="https://inq.com/" />
+          <meta name="designer" content="inq." />
           <meta
             property="og:title"
             :content="`${getFullname}'s Digital Business Card`"
@@ -106,6 +106,7 @@
               <p>to view my Business Card on another device</p>
             </div>
           </div>
+
           <header>
             <div
               id="topActions"
@@ -124,6 +125,12 @@
                     v-html="require(`~/assets/icons/qrcode.svg?include`)"
                   ></div>
                 </a>
+                <a id="showQR" @click.prevent.capture="sharingAlert()"
+                  ><div
+                    class="icon topAction"
+                    v-html="require(`~/assets/icons/save.svg?include`)"
+                  ></div>
+                </a>
               </div>
               <a
                 v-if="pubKeyIsValid"
@@ -135,6 +142,21 @@
                 ></div>
               </a>
             </div>
+            <!--Custom code-->
+          <div
+            :style="`top: 2rem;`"
+          >
+          <div class="text-white text-center">
+            <div id="qrcode">
+    <qrcode-vue :value="value" :size="size" level="H"></qrcode-vue>
+  </div>
+              <div id="qrcode"></div>
+              <h3>Scan the QR Code</h3>
+              <h3>to save my contact in your contacts list</h3>
+            </div>
+          </div>
+          <!--Custom code-->
+
             <div class="headerImgC">
               <img
                 id="cover"
@@ -209,7 +231,7 @@
                 class="icon iconColor"
                 v-html="require(`~/assets/icons/add-user.svg?include`)"
               ></div>
-              <b class="iconColor">Save Contact</b>
+              <b class="iconColor">Download the contact file</b>
             </a>
             <div class="actions">
               <div
@@ -344,10 +366,10 @@
             Created by
             <a
               class="textColor"
-              href="https://kouete.com/"
+              href="https://inq.com/"
               target="_blank"
               rel="noopener noreferrer"
-              >Kouete Digital Solutions</a
+              >inq.</a
             >
           </footer>
         </body>
@@ -362,6 +384,7 @@ import DocumentDownloader from './DocumentDownloader'
 import ProductShowcase from './ProductShowcase'
 import utils from '@/mixins/utils'
 import { mapState } from 'vuex'
+import QrcodeVue from 'qrcode.vue'
 
 export default {
   props: [
@@ -385,6 +408,7 @@ export default {
     MediaPlayer,
     DocumentDownloader,
     ProductShowcase,
+    QrcodeVue,
   },
   watch: {
     getFeaturedMusic(oldv, newv) {
@@ -395,6 +419,8 @@ export default {
     return {
       paused: [],
       hasInstagramEmbed: false,
+      value: 'https://example.com',
+      size: 150,
     }
   },
   computed: {
@@ -403,6 +429,10 @@ export default {
       let fn = this.genInfo.fname
       let ln = this.genInfo.lname
       return (fn + ln).length ? `${fn ? fn : ''}${ln ? ' ' + ln : ''}` : null
+    },
+    getFirstName() {
+      let fn = this.genInfo.fname
+      return fn.length ? `${fn ? fn : ''}` : null
     },
     hasOnlyProfilePic() {
       return !(this.images.cover.url || this.images.logo.url)
