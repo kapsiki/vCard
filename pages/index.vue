@@ -137,6 +137,7 @@
         </button>
       </div>
     </div>
+    <form @submit.prevent="updateQRCode">
     <div class="md:grid md:grid-cols-2">
       <div class="px-4 mt-32" id="contactInfo">
         <div ref="create" id="step-1" class="pt-8">
@@ -389,6 +390,31 @@ border-gray-700
             ></textarea>
           </div>
         </div>
+
+        <button type="submit" 
+          class="
+            font-extrabold
+            leading-none
+            text-lg
+            tracking-wide
+            select-none
+            shrink-0
+            p-5
+            mt-5
+            mr-2
+            text-white
+            bg-red-500
+            rounded
+            hover:bg-emerald-500
+            focus:bg-emerald-500
+            transition-colors
+            duration-200
+            focus:outline-none
+          "
+    >
+      Generate QR Code
+    </button>
+
         <div id="step-3" class="mt-16">
           <h2 class="font-extrabold text-2xl">Primary actions</h2>
           <draggable
@@ -993,6 +1019,7 @@ border-gray-700
                 ref="html"
                 :username="username"
                 :genInfo="genInfo"
+                :updateQRCode="updateQRCode"
                 :images="images"
                 :featured="featured"
                 :colors="colors"
@@ -1011,6 +1038,7 @@ border-gray-700
         </div>
       </div>
     </div>
+  </form>
     <Vcard ref="vCard" :vCard="vCard" />
     <Footer />
   </div>
@@ -1027,6 +1055,7 @@ import Download from '@/components/Download'
 import Help from '@/components/Help'
 import Footer from '@/components/Footer'
 import Cropper from '@/components/Cropper'
+import { EventBus } from '@/assets/scripts/eventBus'
 
 import Vcard from '@/components/Vcard'
 import JSZip from 'jszip'
@@ -1057,6 +1086,12 @@ export default {
 
   data() {
     return {
+      contact: {
+        fname: '',
+        lname: '',
+        phone: '',
+        email: ''
+      },
       downloadCheckList: [
         {
           label:
@@ -1815,6 +1850,26 @@ export default {
     },
   },
   methods: {
+    updateQRCode() {
+      const getNumber = (type) => {
+        let no = this.primaryActions
+          .map((e) => (e.name == type ? e.value : null))
+          .filter((e) => e)[0]
+        return no ? no.replace(/\s/g, '') : null
+      }
+
+      let email = this.primaryActions
+        .map((e) => (e.name == 'Email' ? e.value : null))
+        .filter((e) => e)[0]
+
+      let website = this.primaryActions
+      .map((e) => (e.name == 'Website' ? e.value : null))
+      .filter((e) => e)[0]
+
+      const { fname, lname, title, biz } = this.genInfo;
+      const vCardData = this.$refs.vCard.$refs.vCard.innerText
+      EventBus.$emit('update-qr-code', vCardData);
+    },
     ...mapActions(['changeTheme']),
     togglePreview() {
       this.opening = true

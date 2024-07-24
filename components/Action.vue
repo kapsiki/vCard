@@ -21,7 +21,7 @@
     <div class="w-full">
       <input
         ref="input"
-        class="px-4 w-full h-12 bg-black placeholder-gray-600 rounded-r border border-transparent transition-colors duration-200 focus:outline-none focus:border-gray-600 hover:border-gray-600"
+        class="px-4 w-full h-12 bg-white placeholder-gray-600 rounded-r border border-transparent transition-colors duration-200 focus:outline-none focus:border-gray-600 hover:border-gray-600"
         type="text"
         :aria-label="'Enter ' + item.label"
         :title="'Enter ' + item.label"

@@ -100,11 +100,6 @@
                 <span class="iconColor">Copy URL</span>
               </button>
             </div>
-            <div id="qrView" ref="qrView" class="textColor">
-              <div id="qr"></div>
-              <h3>Scan the QR Code</h3>
-              <p>to view my Business Card on another device</p>
-            </div>
           </div>
 
           <header>
@@ -142,21 +137,6 @@
                 ></div>
               </a>
             </div>
-            <!--Custom code-->
-          <div
-            :style="`top: 2rem;`"
-          >
-          <div class="text-white text-center">
-            <div id="qrcode">
-    <qrcode-vue :value="value" :size="size" level="H"></qrcode-vue>
-  </div>
-              <div id="qrcode"></div>
-              <h3>Scan the QR Code</h3>
-              <h3>to save my contact in your contacts list</h3>
-            </div>
-          </div>
-          <!--Custom code-->
-
             <div class="headerImgC">
               <img
                 id="cover"
@@ -357,6 +337,15 @@
                 </div>
               </div>
             </div>
+            <!--Custom code-->
+          <div
+            :style="`top: 2rem;`"
+          >
+          <ContactForm 
+            :genInfo="genInfo"
+            />
+          </div>
+          <!--Custom code-->
           </main>
           <footer
             v-if="footerCredit"
@@ -382,6 +371,7 @@
 import MediaPlayer from './MediaPlayer'
 import DocumentDownloader from './DocumentDownloader'
 import ProductShowcase from './ProductShowcase'
+import ContactForm from './SaveContact'
 import utils from '@/mixins/utils'
 import { mapState } from 'vuex'
 import QrcodeVue from 'qrcode.vue'
@@ -409,6 +399,7 @@ export default {
     DocumentDownloader,
     ProductShowcase,
     QrcodeVue,
+    ContactForm,
   },
   watch: {
     getFeaturedMusic(oldv, newv) {
@@ -419,8 +410,6 @@ export default {
     return {
       paused: [],
       hasInstagramEmbed: false,
-      value: 'https://example.com',
-      size: 150,
     }
   },
   computed: {
@@ -429,10 +418,6 @@ export default {
       let fn = this.genInfo.fname
       let ln = this.genInfo.lname
       return (fn + ln).length ? `${fn ? fn : ''}${ln ? ' ' + ln : ''}` : null
-    },
-    getFirstName() {
-      let fn = this.genInfo.fname
-      return fn.length ? `${fn ? fn : ''}` : null
     },
     hasOnlyProfilePic() {
       return !(this.images.cover.url || this.images.logo.url)
